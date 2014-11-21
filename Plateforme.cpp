@@ -12,75 +12,75 @@ Plateforme::~Plateforme()
 {
 }
 
-void addCours(Cours &cours)
+void Plateforme::addCours(Cours &cours)
 {
 }
 
-void addUtilisateur(Utilisateur &u)
+void Plateforme::addUtilisateur(Utilisateur &u)
 {
 }
 
-void setLogActif(string login)
+void Plateforme::setLogActif(string login)
 {
      logActif = login;
 }
  
-vector<Cours> getLcours()
+vector<Cours> Plateforme::getLcours()
 {
    return lCours;
 }
 
-vector<Utilisateur> getLuti()
+vector<Utilisateur> Plateforme::getLuti()
 {
  return lUti;
 }
 
-Cours getCours(string nom)
+Cours Plateforme::getCours(string nom)
 {
 }
 
-Utilisateur getUti(string login)
+Utilisateur Plateforme::getUti(string login)
 {
 }
       
-boolean existeLogin(string login)
+boolean Plateforme::existeLogin(string login)
 {
 }
 
-string creerLogin(int statut, string nom)
-{
-}
-
-
-vector<Cours> getCoursEtu(Etudiant &e)
-{
-}
-
-vector<Cours> getCoursProf(Enseignant &e)
+string Plateforme::creerLogin(int statut, string nom)
 {
 }
 
 
-void envoyerNotification(string message, Utilisateur &u)
+vector<Cours> Plateforme::getCoursEtu(Etudiant &e)
 {
 }
 
-void validerCours(Cours &c, int i)
+vector<Cours> Plateforme::getCoursProf(Enseignant &e)
 {
 }
 
-boolean datePassee(ctime d1, ctime d2)
+
+void Plateforme::envoyerNotification(string message, Utilisateur &u)
 {
 }
 
-void deconnexion()
+void Plateforme::validerCours(Cours &c, int i)
 {
 }
 
-void supprimerCours(Cous &c)
+boolean Plateforme::datePassee(ctime d1, ctime d2)
 {
 }
 
-void supprimerUti(Utilisateur &u)
+void Plateforme::deconnexion()
+{
+}
+
+void Plateforme::supprimerCours(Cous &c)
+{
+}
+
+void Plateforme::supprimerUti(Utilisateur &u)
 {
 }
