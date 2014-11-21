@@ -28,22 +28,20 @@ class Cours
       public :
              
       Cours(); /* Constructeur*/
-      int getNom();
+      std::string getNom();
       std::time getDateDebut();
       std::time getDateFin();
       int getStatut();
       void setStatut(int statut);
       Enseignant getProf(); 
-      /*
-      Collection <Etudiant> getListePrinc();
-      Collection <Etudiant> getListeAttente();
-      Collection <Ressource> getListeRessource(); 
-      int getPlace(Etudiant &e, Collection<Etudiant> i);*/
+      vector <Etudiant> getListePrinc();
+      vector <Etudiant> getListeAttente();
+      vector <Ressource> getListeRessource();
+      int getPlace(Etudiant &e, vector<Etudiant> i);
       int rechercheEtudiant(Etudiant &e);
       int inscrire(Etudiant &e);
       void addRessource (Ressource &r);
       Ressource getRessource(std::string nom);
-      /*Collection<Cours> getListe(int statut);*/
       int getMaxInscrit();
       boolean lpPleine();   
       
