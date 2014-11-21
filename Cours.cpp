@@ -12,32 +12,32 @@ Cours::~Cours()
 {
 }
 
-string getNom()
+string Cours::getNom()
 {
     return nom;
 }
 
-time getDateDebut()
+time Cours::getDateDebut()
 {
      return dateDebut;
 }
 
-time getDateFin()
+time Cours::getDateFin()
 {
      return dateFin;
 }
 
-int getStatut()
+int Cours::getStatut()
 {
     return statut;
 }
 
-void setStatut(int s)
+void Cours::setStatut(int s)
 {
      statut = s;
 }
 
-Enseignant getProf()
+Enseignant Cours::getProf()
 {
     return prof;
 }
@@ -64,14 +64,14 @@ int getPlace(Etudiant &e, vector<Etudiant> i)
     //compte en parcourant ? 
 }
 
-int rechercheEtudiant(Etudiant &e)
+int Cours::rechercheEtudiant(Etudiant &e)
 {
     // si dans lp return 1
     //si dans la return 2
     // else return 0
 }
-
-int inscrire(Etudiant &e)
+ 
+int Cours::inscrire(Etudiant &e)
 {
     if (lpPleine())
     { 
@@ -85,22 +85,25 @@ int inscrire(Etudiant &e)
     }
 }
  
-void addRessource(Ressource &r)
+void Cours::addRessource(Ressource &r)
 {
      lr.insert(&r);
 }
   
-Ressource getRessource(string nom)
+Ressource Cours::getRessource(string nom)
 {
-          //chercher la resssource dans la liste puis la renvoyer
 }
 
-int getMaxInscrit()
+Collection<Cours> Cours::getListe(int statut)
+{
+}
+
+int Cours::getMaxInscrit()
 {
     return nbMaxInscrits;
 }
 
-boolean lpPleine()
+boolean Cours::lpPleine()
 {
    return (lp.size >= getMaxInscrit());
 } 

@@ -28,7 +28,12 @@ class Cours
       public :
              
       Cours(); /* Constructeur*/
+<<<<<<< HEAD
       std::string getNom();
+=======
+      ~Cours(); /*Destructeur */
+      int getNom();
+>>>>>>> 723c17b0292328c2b12047611279656bd2ca4ac9
       std::time getDateDebut();
       std::time getDateFin();
       int getStatut();
