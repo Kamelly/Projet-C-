@@ -1,22 +1,15 @@
-<<<<<<< HEAD
-#ifndef DEF_COURS
-=======
 #ifndef COURS
->>>>>>> fb3ac5603c51c645041796e602c831db4e707e9d
+
 #define COURS
 
 #include<string>
 #include<ctime>
 #include<vector>
-<<<<<<< HEAD
-#include<Etudiant.h>
-#include<Enseignant.h>
-#include<Ressource.h>
-=======
+
 #include"Etudiant.h"
 #include"Enseignant.h"
 #include"Ressource.h"
->>>>>>> fb3ac5603c51c645041796e602c831db4e707e9d
+
 
 
 class Cours
