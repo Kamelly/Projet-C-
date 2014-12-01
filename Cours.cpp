@@ -2,9 +2,9 @@
 using namespace std;
 
 /* Constructeur*/
-Cours::Cours() : nom("")
+Cours::Cours() : nom(""), dateDebut(), dateFin(), statut(), prof(), lp(), la(), lr(), nbMaxInscrits()
 {
-               //Il faut tout initialiser non ? nom, dateDebut, dateFin, etc.. 
+// Je ne sais pas si l'initialiation est bonne...
 	la.reserve(50);
 	lp.reserve(50);
 	lr.reserve(50);
