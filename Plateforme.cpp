@@ -97,15 +97,35 @@ vector<Cours> Plateforme::getCoursEtu(Etudiant &e)
 {
 	//creer une liste vide lcourEtu
 	vector<Cours> lCoursEtu;
-	// Pour chaque cours c
+	vector<Etudiant> listeEtudiantP;
+	vector<Etudiant> listeEtudiantA;
+	// Pour chaque cours i
 	for (unsigned int i = 0; i < lCours.size(); i++){
-		// si cours valide 
-		if (lCours[i].getStatut() == 0){
-
-		}
-	}
-
-
+        listeEtudiantP = LCours[i].getListePrinc();
+        // pour chaque etudiant de la liste principal
+        for(unsigned int j = 0 ; j < listeEtudiantP.size() ; j++)
+        {
+                     if(listeEtudiant[j].compare(e) == 0)
+                     {
+                      lCoursEtu.push_back(i);
+                     }
+        }
+       	// si le cours est en attente 
+		if (lCours[i].getStatut() == -1)
+        {
+          listeEtudiantA = LCours[i].getListeAttente();
+          // Pour chaque etudiant de la liste d'attente
+         for(unsigned int j = 0 ; j < listeEtudiantA.size() ; j++)
+           {
+             if(listeEtudiant[j].compare(e) == 0)
+              {
+                lCoursEtu.push_back(i);
+              }
+           }
+        }
+    }
+    return lCoursEtu;
+}
 	/*
 pour chaque etudiant e de la liste du cour
 if( &e == e)
