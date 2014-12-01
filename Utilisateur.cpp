@@ -4,7 +4,7 @@ using namespace std;
 /* Constructeur*/
 Utilisateur::Utilisateur() : login(""),nom(""),prenom(""),mail("")
 {
-               
+              
 }
 
 /* Destructeur */
