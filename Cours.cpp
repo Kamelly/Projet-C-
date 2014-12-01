@@ -4,6 +4,7 @@ using namespace std;
 /* Constructeur*/
 Cours::Cours() : nom("")
 {
+               //Il faut tout initialiser non ? nom, dateDebut, dateFin, etc.. 
 	la.reserve(50);
 	lp.reserve(50);
 	lr.reserve(50);
@@ -67,9 +68,9 @@ int Cours::getPlace(Etudiant &e, vector<Etudiant> i)
   for (unsigned int j = 0 ; j <= i.size() ; j++)
     {
       if(i[j].compare(e)== 0)
-	{
-	  return comp;
-	}
+      {
+      return comp;
+      }
       comp = comp + 1;
     } 
 }
@@ -86,7 +87,7 @@ int Cours::rechercheEtudiant(Etudiant &e)
 	  if(la[j].compare(e) == 0)
 	    {
 			return 2;
-	}
+	    }
 	}
 	return 0;
     // si dans lp return 1
@@ -115,6 +116,16 @@ void Cours::addRessource(Ressource &r)
   
 Ressource Cours::getRessource(string nom)
 {
+for (unsigned int i = 0; i < lr.size(); i++){
+	  if(lr[i].getNom().compare(nom) == 0)
+      {
+           return lr[i];
+      }                 
+      else
+      {
+          //erreur : ressource non trouvée
+      }
+}
 }
 
 
