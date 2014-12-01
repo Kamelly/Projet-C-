@@ -1,8 +1,6 @@
 #include "Plateforme.h"
 
 
-/* Ajouter une fonction qui permet de trouver a quel endroit(position) ce trouve un objet dans une liste */
-
 using namespace std;
 
 /* Constructeur*/
@@ -187,7 +185,15 @@ void Plateforme::supprimerUti(Utilisateur &u)
 			lUti.erase(lUti.begin()+ i-1);
 	}
 }
-vector <Cours> Cours::getListe(int statut)
-{
-       
+  vector <Cours> Cours::getListe(int statut)
+    {
+          vector<Cours> lCoursStatut;
+          for ( unsigned int i = 0; i< lCours.size() ; i++)
+          {
+              if (lCours[i].getStatut() == statut)
+              { 
+                lCoursStatut.push_back(i); 
+              } 
+          }
+          return lCoursStatus;                                                     
 }
