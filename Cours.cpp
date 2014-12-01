@@ -45,18 +45,15 @@ Enseignant Cours::getProf()
 }
 
 
-
 vector <Etudiant> Cours::getListePrinc()
 {
        return lp;   
 }
 
 vector <Etudiant> Cours::getListeAttente()
-
 {
        return la;
 }
-
 
 vector <Ressource> Cours::getListeRessource()
 {
@@ -66,18 +63,30 @@ vector <Ressource> Cours::getListeRessource()
 
 int Cours::getPlace(Etudiant &e, vector<Etudiant> i)
 {
-    //compte en parcourant ? 
+  int comp = 1;
+  for (unsigned int j = 0 ; j <= i.size() ; j++)
+    {
+      if(i[j].compare(e)== 0)
+	{
+	  return comp;
+	}
+      comp = comp + 1;
+    } 
 }
 
 int Cours::rechercheEtudiant(Etudiant &e)
 {
 	for (unsigned int i = 0; i < lp.size(); i++){
-		//if ()
-			return 1
+	  if(lp[i].compare(e) == 0)
+	    {
+	      return 1;
+	    }
 	}
 	for (unsigned int j = 0; j < la.size(); j++){
-		//if ()
+	  if(la[j].compare(e) == 0)
+	    {
 			return 2;
+	}
 	}
 	return 0;
     // si dans lp return 1
@@ -108,22 +117,16 @@ Ressource Cours::getRessource(string nom)
 {
 }
 
-
-Collection<Cours> Cours::getListe(int statut)
-{
-}
 /*vector <Cours> Cours::getListe(int statut)
 {
 }*/
-
 
 int Cours::getMaxInscrit()
 {
     return nbMaxInscrits;
 }
 
-
-boolean Cours::lpPleine()
+bool Cours::lpPleine()
 {
    return ((int)lp.size() >= getMaxInscrit());
 } 

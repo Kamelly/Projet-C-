@@ -11,7 +11,6 @@ Plateforme::Plateforme(): nbMaxCours(0)
 	// On initialise la taille des vectors
 	lUti.reserve(50);
 	lCours.reserve(50);
->>>>>>> fb3ac5603c51c645041796e602c831db4e707e9d
 }
 
 /* Destructeur */
@@ -44,55 +43,7 @@ vector<Utilisateur> Plateforme::getLuti()
  return lUti;
 }
 
-<<<<<<< HEAD
-Cours Plateforme::getCours(string nom)
-{
-/* tant que liste non vide faire 
- Cours cour = lCours.front();
-if(cour.getNom() == nom)
-{
-return cour;
-}
-LCours = reste de LCours
-ATTENTION faut creer un lite supprimer le premier de la liste puis la copier dans l'ancienne 
-*/
-     
-}
-
-Utilisateur Plateforme::getUti(string login)
-{
-/* tant que liste non vide faire 
- Utilisateur uti = lUti.front();
-if(uti.getNom() == login)
-{
-return uti;
-}
-lUti = reste de lUti
-ATTENTION faut creer un lite supprimer le premier de la liste puis la copier dans l'ancienne 
-*/
-}
-      
-boolean Plateforme::existeLogin(string login)
-{
-        /*if( login est dans lUti) 
-        return true ;
-        else
-        return false*/
-}
-
-string Plateforme::creerLogin(int statut, string nom)
-{
-       
-}
-
-
-vector<Cours> Plateforme::getCoursEtu(Etudiant &e)
-{
-              }
-
-// Devrait fonctionner, mais je comprend pas le reste de l'algo :
-//LCours = reste de LCours
-//ATTENTION faut creer un lite supprimer le premier de la liste puis la copier dans l'ancienne
+// Mélanie P : En fait, tu as fait d'une autre manière que celle que j'avais a l'esprit mais ça marche tout aussi bien 
 bool Plateforme::getCours(string nom, Cours &c)
 {
 	for (unsigned int i = 0; i < lCours.size(); i++) {
@@ -110,9 +61,6 @@ Utilisateur u;
 bool succes = plateforme->getUti("gna", u);
 SI on a trouvé l'utilisateur, il est dans u et succes vaut TRUE, sinon succes vaux FALSE
 
-Je comprends pas le reste de l'algo :
-lUti = reste de lUti
-ATTENTION faut creer un lite supprimer le premier de la liste puis la copier dans l'ancienne
 */
 bool Plateforme::getUti(string login, Utilisateur &u)
 {
@@ -161,7 +109,6 @@ vector<Cours> Plateforme::getCoursEtu(Etudiant &e)
 
 
 	/*
->>>>>>> fb3ac5603c51c645041796e602c831db4e707e9d
 pour chaque etudiant e de la liste du cour
 if( &e == e)
 {
@@ -178,26 +125,34 @@ sinon
 
 vector<Cours> Plateforme::getCoursProf(Enseignant &e)
 {
+  vector<Cours> lCoursProf;
+  for (unsigned int i = 0 ; i< lCours.size(); i++)
+    {
+      if((lCours[i].getProf()).compare(e) == 0)
+	{
+	  // ajouter le cour das la liste des cours du prof
+	  lCoursProf.push_back(i);
+	}
+    }
+
 }
 
 
 void Plateforme::envoyerNotification(string message, Utilisateur &u)
 {
-     /* recupere le mail de l'utilisateur 
-     envoyer un message "String"
-     */
+  for (unsigned int i = 0; i < lUti.size(); i++)
+    {
+      if ((lUti[i].getLogin()).compare(u) == 0)
+	{
+	  string mail = getmail() ;
+	  // l'envoyer et ajouter un message
+	}
+    }
 }
+      
 
 void Plateforme::validerCours(Cours &c, int i)
 {
-<<<<<<< HEAD
-     &c.setStatut(i);     
-}
-
-boolean Plateforme::datePassee(ctime d1, ctime d2)
-{
-  return d1==d2;
-=======
      c.setStatut(i);     
 }
 
@@ -209,19 +164,12 @@ bool Plateforme::datePassee(time_t d1, time_t d2)
 		return true;
 	// SI d2 <= d1
 	return false;
->>>>>>> fb3ac5603c51c645041796e602c831db4e707e9d
 }
 
 void Plateforme::deconnexion()
 {
 }
 
-<<<<<<< HEAD
-void Plateforme::supprimerCours(Cous &c)
-{
-     /* trouve la position du cours voulu dans vector puis */ 
-     //lcours.erase(/*iterator position*/);
-=======
 void Plateforme::supprimerCours(Cours &c)
 {
 	for (int i = 0; i< (int)lCours.size(); ++i){
@@ -229,19 +177,13 @@ void Plateforme::supprimerCours(Cours &c)
 		if (lCours[i].getNom().compare(c.getNom()) == 0)
 			lCours.erase(lCours.begin()+i-1);
 	}
->>>>>>> fb3ac5603c51c645041796e602c831db4e707e9d
 }
 
 void Plateforme::supprimerUti(Utilisateur &u)
 {
-<<<<<<< HEAD
-     /*trouver la position de l'utilisateur dans Vector puis*/
-    // lUti.erase(/*iterator position*/)
-=======
 	for (int i = 0; i< (int)lUti.size(); ++i){
 		// Si le login de l'utilisateur à l'indice i == le login de u
 		if (lUti[i].getLogin().compare(u.getLogin()) == 0)
 			lUti.erase(lUti.begin()+ i-1);
 	}
->>>>>>> fb3ac5603c51c645041796e602c831db4e707e9d
 }
