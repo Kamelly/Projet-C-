@@ -11,6 +11,7 @@ Enseignant::~Enseignant()
 {
 }
 
+
 virtual string Enseignant::getStatut(){
-        return "enseignant";
+                return "enseignant";
 }

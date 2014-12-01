@@ -11,6 +11,7 @@ Etudiant::~Etudiant()
 {
 }
 
+
 virtual string Etudiant::getStatut(){
         return "etudiant";
 }
