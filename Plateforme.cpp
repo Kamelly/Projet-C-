@@ -41,7 +41,7 @@ vector<Utilisateur> Plateforme::getLuti()
  return lUti;
 }
 
-// Mélanie P : En fait, tu as fait d'une autre manière que celle que j'avais a l'esprit mais ça marche tout aussi bien 
+// Mélanie P : En fait, tu as fait d'une autre manière que celle que j'avais à l'esprit mais ça marche tout aussi bien 
 bool Plateforme::getCours(string nom, Cours &c)
 {
 	for (unsigned int i = 0; i < lCours.size(); i++) {
@@ -53,6 +53,8 @@ bool Plateforme::getCours(string nom, Cours &c)
 	return false;     
 }
 
+// Quelle fonction ? 
+ 
 /* Fonction corrigée par le prof!
 Utiliser comme ca :
 Utilisateur u;
@@ -92,7 +94,6 @@ string Plateforme::creerLogin(string statut, string nom)
 }
 
 
-// Fonction pas finie, je (Florine) comprend pas l'algo
 vector<Cours> Plateforme::getCoursEtu(Etudiant &e)
 {
 	//creer une liste vide lcourEtu
@@ -100,7 +101,8 @@ vector<Cours> Plateforme::getCoursEtu(Etudiant &e)
 	vector<Etudiant> listeEtudiantP;
 	vector<Etudiant> listeEtudiantA;
 	// Pour chaque cours i
-	for (unsigned int i = 0; i < lCours.size(); i++){
+	for (unsigned int i = 0; i < lCours.size(); i++)
+    {
         listeEtudiantP = LCours[i].getListePrinc();
         // pour chaque etudiant de la liste principal
         for(unsigned int j = 0 ; j < listeEtudiantP.size() ; j++)
@@ -126,20 +128,7 @@ vector<Cours> Plateforme::getCoursEtu(Etudiant &e)
     }
     return lCoursEtu;
 }
-	/*
-pour chaque etudiant e de la liste du cour
-if( &e == e)
-{
-lcourEtu.add(c);
-}
-}
-sinon
-{
-     parcour liste princ + liste attente
-     }
-     */
 
-}
 
 vector<Cours> Plateforme::getCoursProf(Enseignant &e)
 {
@@ -148,14 +137,14 @@ vector<Cours> Plateforme::getCoursProf(Enseignant &e)
     {
       if((lCours[i].getProf()).compare(e) == 0)
 	{
-	  // ajouter le cour das la liste des cours du prof
+	  // ajouter le cour dans la liste des cours du prof
 	  lCoursProf.push_back(i);
 	}
     }
 
 }
 
-
+// On va la modifier pour qu'au lieu d'envoyer un mail elle donne une liste de notification quand le gars se connecte
 void Plateforme::envoyerNotification(string message, Utilisateur &u)
 {
   for (unsigned int i = 0; i < lUti.size(); i++)
@@ -184,6 +173,8 @@ bool Plateforme::datePassee(time_t d1, time_t d2)
 	return false;
 }
 
+
+// A faire mais je ne sais pas comment 
 void Plateforme::deconnexion()
 {
 }
