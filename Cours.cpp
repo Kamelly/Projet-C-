@@ -117,9 +117,6 @@ Ressource Cours::getRessource(string nom)
 {
 }
 
-/*vector <Cours> Cours::getListe(int statut)
-{
-}*/
 
 int Cours::getMaxInscrit()
 {
