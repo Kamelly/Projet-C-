@@ -144,7 +144,8 @@ vector<Cours> Plateforme::getCoursProf(Enseignant &e)
 
 }
 
-// On va la modifier pour qu'au lieu d'envoyer un mail elle donne une liste de notification quand le gars se connecte
+// On va la modifier pour qu'au lieu d'envoyer un mail elle donne une liste de notification quand le gars se connecte (mel P)
+// Ca veut dire qu'il faut ajouter une liste de notification (collection<String>) dans utilisateur.... (mel B)
 void Plateforme::envoyerNotification(string message, Utilisateur &u)
 {
   for (unsigned int i = 0; i < lUti.size(); i++)
