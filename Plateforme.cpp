@@ -187,3 +187,7 @@ void Plateforme::supprimerUti(Utilisateur &u)
 			lUti.erase(lUti.begin()+ i-1);
 	}
 }
+vector <Cours> Cours::getListe(int statut)
+{
+       
+}
