@@ -42,6 +42,7 @@ vector<Utilisateur> Plateforme::getLuti()
 }
 
 // Mélanie P : En fait, tu as fait d'une autre manière que celle que j'avais à l'esprit mais ça marche tout aussi bien 
+
 bool Plateforme::getCours(string nom, Cours &c)
 {
 	for (unsigned int i = 0; i < lCours.size(); i++) {
@@ -53,9 +54,8 @@ bool Plateforme::getCours(string nom, Cours &c)
 	return false;     
 }
 
-// Quelle fonction ? 
  
-/* Fonction corrigée par le prof!
+/* Fonction getUti corrigée par le prof!
 Utiliser comme ca :
 Utilisateur u;
 bool succes = plateforme->getUti("gna", u);
