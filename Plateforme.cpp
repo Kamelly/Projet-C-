@@ -141,7 +141,7 @@ vector<Cours> Plateforme::getCoursProf(Enseignant &e)
 	  lCoursProf.push_back(i);
 	}
     }
-
+	return lCoursProf;
 }
 
 // On va la modifier pour qu'au lieu d'envoyer un mail elle donne une liste de notification quand le gars se connecte (mel P)
