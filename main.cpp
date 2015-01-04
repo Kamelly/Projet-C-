@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <cstdlib>
 #include <iostream>
 #include"Plateforme.h"
 
@@ -13,7 +14,7 @@ int main(int argc, const char* argv[])
 	cout << "Entrez votre login : ";
 	getline(cin, login);
 	cout << "Bonjour, " << login << "!\n";
-	Plateforme p = Plateforme(login);
+	Plateforme p = Plateforme();
 	if (login == "admin"){
 		/*******************************************ADMIN***********************************************/
 		int chosenInt = -1;
@@ -31,7 +32,7 @@ int main(int argc, const char* argv[])
 			switch (chosenInt) {
 				/****************Quitter **********/
 			case 0:
-				go_on = 0;
+				//go_on = 0;
 				break;
 				/****************Ajouter un utilisateur **********/
 			case 1:
@@ -55,7 +56,7 @@ int main(int argc, const char* argv[])
 				break;
 				/****************Deconnexion **********/
 			case 5:
-
+				p.deconnexion();
 				go_on = 0;
 				break;
 			default:

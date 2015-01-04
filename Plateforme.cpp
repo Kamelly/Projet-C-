@@ -1,16 +1,20 @@
+#include <stdio.h>
+#include <cstdlib>
+#include <iostream>
+
 #include "Plateforme.h"
 
 using namespace std;
 
 /* Constructeur*/
-Plateforme::Plateforme(string log)
+Plateforme::Plateforme()
 {
 	nbMaxCours = 0;
 	// On initialise la taille des vectors
 	lUti.reserve(50);
 	//lUti.push_back(Etudiant());
 	lCours.reserve(50);
-	logActif = log;
+	logActif = "";
 }
 
 /* Destructeur */
@@ -180,8 +184,15 @@ bool Plateforme::datePassee(time_t d1, time_t d2)
 
 
 // A faire mais je ne sais pas comment 
-void Plateforme::deconnexion()
+string Plateforme::deconnexion()
 {
+	string login = NULL;
+	printf("Entrez votre login : ");
+	getline(cin, login);
+	cout << "Bonjour, " << login << "!\n";
+	setLogActif(login);
+	return login;
+	//return logActif;
 }
 
 void Plateforme::supprimerCours(Cours &c)

@@ -22,7 +22,7 @@ private:
 
 public:
 
-	Plateforme(std::string log); /*Constructeur*/
+	Plateforme(); /*Constructeur*/
 	~Plateforme(); /*Destructeur*/
 	void addCours(Cours &cours);
 	void addUtilisateur(Utilisateur &u);
@@ -38,7 +38,7 @@ public:
 	void envoyerNotification(std::string message, Utilisateur &u);
 	void validerCours(Cours &c, int i);
 	bool datePassee(time_t d1, time_t d2);
-	void deconnexion();
+	std::string deconnexion();
 	void supprimerCours(Cours &c);
 	void supprimerUti(Utilisateur &u);
 
