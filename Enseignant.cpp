@@ -5,6 +5,7 @@ using namespace std;
 /* Constructeur*/
 Enseignant::Enseignant()
 {       
+	Utilisateur();
 }
 
 /* Destructeur */

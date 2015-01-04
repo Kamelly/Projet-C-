@@ -22,7 +22,7 @@ private:
 
 public:
 
-	Plateforme(); /*Constructeur*/
+	Plateforme(std::string log); /*Constructeur*/
 	~Plateforme(); /*Destructeur*/
 	void addCours(Cours &cours);
 	void addUtilisateur(Utilisateur &u);

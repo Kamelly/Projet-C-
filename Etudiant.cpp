@@ -5,6 +5,7 @@ using namespace std;
 
 Etudiant::Etudiant()
 {
+	Utilisateur();
 	nbCours = 0;
 }
 

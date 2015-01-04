@@ -28,7 +28,7 @@ private:
 
 public:
 
-	Cours(); /* Constructeur*/
+	Cours(std::string nom, int nb, Enseignant &e); /* Constructeur*/
 	~Cours(); /*Destructeur */
 	std::string getNom();
 	std::time_t getDateDebut();

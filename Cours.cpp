@@ -4,8 +4,12 @@ using namespace std;
 
 
 /* Constructeur*/
-Cours::Cours() : nom(""), dateDebut(), dateFin(), statut(), prof(), lp(), la(), lr(), nbMaxInscrits()
+Cours::Cours(string n, int nb, Enseignant &e)
 {
+	nom = n;
+	statut = -1;
+	nbMaxInscrits = nb;
+	prof = e;
 // Je ne sais pas si l'initialiation est bonne...
 	la.reserve(50);
 	lp.reserve(50);

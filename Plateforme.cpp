@@ -3,12 +3,14 @@
 using namespace std;
 
 /* Constructeur*/
-Plateforme::Plateforme()
+Plateforme::Plateforme(string log)
 {
 	nbMaxCours = 0;
 	// On initialise la taille des vectors
 	lUti.reserve(50);
+	//lUti.push_back(Etudiant());
 	lCours.reserve(50);
+	logActif = log;
 }
 
 /* Destructeur */
