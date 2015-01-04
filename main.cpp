@@ -10,11 +10,11 @@ string login;
 
 int main(int argc, const char* argv[])
 {
+	Plateforme p = Plateforme();
 	printf("\nBienvenue sur la Plateforme de Gestion de Cours!\n");
 	cout << "Entrez votre login : ";
 	getline(cin, login);
 	cout << "Bonjour, " << login << "!\n";
-	Plateforme p = Plateforme();
 	if (login == "admin"){
 		/*******************************************ADMIN***********************************************/
 		int chosenInt = -1;
@@ -28,11 +28,11 @@ int main(int argc, const char* argv[])
 		printf("%s", menu);
 		while (go_on == 1) {
 			printf("%s", invite);
-			scanf_s("%d", chosenInt);
+			scanf_s("%d", &chosenInt);
 			switch (chosenInt) {
 				/****************Quitter **********/
 			case 0:
-				//go_on = 0;
+				go_on = 0;
 				break;
 				/****************Ajouter un utilisateur **********/
 			case 1:
@@ -84,7 +84,7 @@ int main(int argc, const char* argv[])
 			printf("%s", menu);
 			while (go_on == 1) {
 				printf("%s", invite);
-				scanf_s("%d", chosenInt);
+				scanf_s("%d", &chosenInt);
 				switch (chosenInt) {
 					/****************Quitter **********/
 				case 0:
@@ -132,7 +132,7 @@ int main(int argc, const char* argv[])
 				printf("%s", menu);
 				while (go_on == 1) {
 					printf("%s", invite);
-					scanf_s("%d", chosenInt);
+					scanf_s("%d", &chosenInt);
 					switch (chosenInt) {
 						/****************Quitter **********/
 					case 0:
