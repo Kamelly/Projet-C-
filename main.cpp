@@ -10,11 +10,20 @@ string login;
 
 int main(int argc, const char* argv[])
 {
-	Plateforme p = Plateforme();
+
 	printf("\nBienvenue sur la Plateforme de Gestion de Cours!\n");
-	cout << "Entrez votre login : ";
-	getline(cin, login);
-	cout << "Bonjour, " << login << "!\n";
+	Plateforme p = Plateforme();
+	login = p.deconnexion();
+	Utilisateur u = Utilisateur("a");
+	// Si le login correspond a un utilisateur
+	if (p.getUti(login, u)){
+
+	}
+	// Sinon
+	else{
+		printf("Utilisateur inconnu");
+	}
+	
 	if (login == "admin"){
 		/*******************************************ADMIN***********************************************/
 		int chosenInt = -1;
@@ -93,7 +102,7 @@ int main(int argc, const char* argv[])
 					break;
 					/****************Consulter mes cours **********/
 				case 1:
-
+					//p.getCoursEtu()
 					go_on = 0;
 					break;
 					/****************Inscription à un cours **********/
@@ -121,6 +130,7 @@ int main(int argc, const char* argv[])
 		else{
 			if (statut == "p"){
 				/*******************************************ENSEIGNANT***********************************************/
+				Enseignant e = Enseignant();
 				int chosenInt = -1;
 				int go_on = 1;
 

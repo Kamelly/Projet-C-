@@ -2,10 +2,14 @@
 using namespace std;
 
 
-Utilisateur::Utilisateur() : login(""), nom(""), prenom(""), mail("")
+Utilisateur::Utilisateur(string log) :  nom(""), prenom(""), mail("")
 {
+	login = login;
 }
 
+Utilisateur::Utilisateur() : login(""), nom(""), prenom(""), mail(""){
+
+}
 
 Utilisateur::~Utilisateur()
 {

@@ -186,7 +186,7 @@ bool Plateforme::datePassee(time_t d1, time_t d2)
 // A faire mais je ne sais pas comment 
 string Plateforme::deconnexion()
 {
-	string login = NULL;
+	string login = "";
 	printf("Entrez votre login : ");
 	getline(cin, login);
 	cout << "Bonjour, " << login << "!\n";
