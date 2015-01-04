@@ -8,7 +8,7 @@ Etudiant::Etudiant()
 	nbCours = 0;
 }
 
-
+/* Destructeur */
 Etudiant::~Etudiant()
 {
 }
@@ -21,4 +21,3 @@ string Etudiant::getStatut(){
 int Etudiant::getNbCours(){
 	return nbCours;
 }
-

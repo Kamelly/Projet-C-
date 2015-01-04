@@ -1,6 +1,5 @@
 #pragma once
 
-
 #ifndef UTILISATEUR
 #define UTILISATEUR
 
@@ -18,7 +17,6 @@ private:
 	std::string prenom;
 	std::string mail;
 
-	int id;
 
 public:
 	Utilisateur();

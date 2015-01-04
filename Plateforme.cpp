@@ -2,14 +2,16 @@
 
 using namespace std;
 
+/* Constructeur*/
 Plateforme::Plateforme()
 {
 	nbMaxCours = 0;
+	// On initialise la taille des vectors
 	lUti.reserve(50);
 	lCours.reserve(50);
 }
 
-
+/* Destructeur */
 Plateforme::~Plateforme()
 {
 }
@@ -21,7 +23,7 @@ void Plateforme::addCours(Cours &cours)
 
 void Plateforme::addUtilisateur(Utilisateur &u)
 {
-	lUti.push_back(u);
+     lUti.push_back(u);
 }
 
 void Plateforme::setLogActif(string login)
@@ -32,6 +34,7 @@ void Plateforme::setLogActif(string login)
 vector<Cours> Plateforme::getLcours()
 {
 	return lCours;
+     //logActif = login;
 }
 
 vector<Utilisateur> Plateforme::getLuti()
@@ -157,10 +160,10 @@ void Plateforme::envoyerNotification(string message, Utilisateur &u)
 	}
 }
 
-
 void Plateforme::validerCours(Cours &c, int i)
 {
-	c.setStatut(i);
+     c.setStatut(i);     
+	 // l'envoyer et ajouter un message
 }
 
 bool Plateforme::datePassee(time_t d1, time_t d2)
@@ -197,18 +200,16 @@ void Plateforme::supprimerUti(Utilisateur &u)
 	}
 }
 
-//??????
-
 /*
-vector<Cours> Plateforme::getListe(int statut)
-{
-	vector<Cours> lCoursStatut;
-	for (unsigned int i = 0; i< lCours.size(); i++)
-	{
-		if (lCours[i].getStatut() == statut)
-		{
-			lCoursStatut.push_back(i);
-		}
-	}
-	return lCoursStatut;
+  vector<Cours> Plateforme::getListe(int statut)
+    {
+          vector<Cours> lCoursStatut;
+          for ( unsigned int i = 0; i< lCours.size() ; i++)
+          {
+              if (lCours[i].getStatut() == statut)
+              { 
+                lCoursStatut.push_back(i); 
+              } 
+          }
+          return lCoursStatus;                                                     
 }*/

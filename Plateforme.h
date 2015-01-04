@@ -2,6 +2,7 @@
 
 #ifndef PLATEFORME
 #define PLATEFORME
+
 #include<string>
 #include<ctime>
 #include<vector>

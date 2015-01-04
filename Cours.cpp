@@ -2,15 +2,17 @@
 using namespace std;
 
 
-Cours::Cours()
+
+/* Constructeur*/
+Cours::Cours() : nom(""), dateDebut(), dateFin(), statut(), prof(), lp(), la(), lr(), nbMaxInscrits()
 {
-	nom = "";
+// Je ne sais pas si l'initialiation est bonne...
 	la.reserve(50);
 	lp.reserve(50);
 	lr.reserve(50);
 }
 
-
+/* Destructeur */
 Cours::~Cours()
 {
 }
@@ -32,7 +34,7 @@ time_t Cours::getDateFin()
 
 int Cours::getStatut()
 {
-	return statut;
+    return statut;
 }
 
 void Cours::setStatut(int s)
@@ -48,7 +50,7 @@ Enseignant Cours::getProf()
 
 vector <Etudiant> Cours::getListePrinc()
 {
-	return lp;
+       return lp; 
 }
 
 vector <Etudiant> Cours::getListeAttente()
@@ -59,6 +61,7 @@ vector <Etudiant> Cours::getListeAttente()
 vector <Ressources> Cours::getListeRessource()
 {
 	return lr;
+    //return la;
 }
 
 
@@ -78,6 +81,7 @@ int Cours::getPlace(Etudiant &e, vector<Etudiant> i)
 int Cours::rechercheEtudiant(Etudiant &e)
 {
 	for (unsigned int i = 0; i < lp.size(); i++){
+
 		if (lp[i].getLogin().compare(e.getLogin()) == 0)
 		{
 			return 1;
@@ -138,4 +142,3 @@ bool Cours::lpPleine()
 {
 	return ((int)lp.size() >= getMaxInscrit());
 }
-

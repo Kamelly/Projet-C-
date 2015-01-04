@@ -1,6 +1,7 @@
 #include "Utilisateur.h"
 using namespace std;
 
+
 Utilisateur::Utilisateur() : login(""), nom(""), prenom(""), mail("")
 {
 }
@@ -25,4 +26,3 @@ string Utilisateur::getMail(){
 string Utilisateur::getPrenom(){
 	return prenom;
 }
-

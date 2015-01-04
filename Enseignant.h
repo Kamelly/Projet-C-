@@ -1,5 +1,4 @@
 #pragma once
-
 #ifndef ENSEIGNANT
 #define ENSEIGNANT
 
@@ -13,6 +12,5 @@ public:
 	~Enseignant();
 	virtual std::string getStatut();
 };
-
 
 #endif

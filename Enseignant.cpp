@@ -2,11 +2,12 @@
 using namespace std;
 
 
+/* Constructeur*/
 Enseignant::Enseignant()
-{
+{       
 }
 
-
+/* Destructeur */
 Enseignant::~Enseignant()
 {
 }
