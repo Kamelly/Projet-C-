@@ -3,9 +3,8 @@
 using namespace std;
 
 
-Etudiant::Etudiant(string log)
+Etudiant::Etudiant(string n, string p) : Utilisateur(n,p)
 {
-	new Utilisateur(log);
 	nbCours = 0;
 }
 

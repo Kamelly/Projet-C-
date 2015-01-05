@@ -3,7 +3,7 @@
 #include <iostream>
 
 #include "Plateforme.h"
-
+#include "Cours.h"
 using namespace std;
 
 /* Constructeur*/

@@ -14,7 +14,7 @@ private:
 
 public:
 
-	Etudiant(std::string log); /* Constructeur*/
+	Etudiant(std::string n, std::string p); /* Constructeur*/
 	~Etudiant(); /*Destructeur */
 	int getNbCours();
 	virtual std::string getStatut();

@@ -9,6 +9,7 @@ class Enseignant : public Utilisateur
 {
 public:
 	Enseignant();
+	Enseignant(std::string n, std::string p);
 	~Enseignant();
 	virtual std::string getStatut();
 };

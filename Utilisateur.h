@@ -21,6 +21,7 @@ private:
 public:
 	Utilisateur();
 	Utilisateur(std::string log);
+	Utilisateur(std::string n, std::string p);
 	~Utilisateur();
 
 	std::string login;

@@ -3,9 +3,13 @@ using namespace std;
 
 
 /* Constructeur*/
-Enseignant::Enseignant()
+Enseignant::Enseignant(string n, string p) : Utilisateur(n,p)
 {       
-	Utilisateur();
+}
+
+Enseignant::Enseignant()
+{
+
 }
 
 /* Destructeur */
